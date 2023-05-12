@@ -1,9 +1,10 @@
-import Image from 'next/image'
+import { db } from "../library/db"
 
-export default function Home() {
+export default async function Home() {
+    await db.set("hello","Bye")
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className='text-red-500'>Hello</div>
+      <div className='text-red-500'>Hello World</div>
     </main>
   )
 }
