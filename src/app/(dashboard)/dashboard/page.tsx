@@ -1,12 +1,13 @@
-// import { getServerSession } from "next-auth";
+// "use client"
+import { getServerSession } from "next-auth";
 import { authoptions } from "../../../library/auth";
 
   
  const Dashboard= async({}) => {
-    // const session = await getServerSession(authoptions)
+    const session = await getServerSession(authoptions)
     return (
         <div>
-            {/* {JSON.stringify(session)} */}
+            <pre>{JSON.stringify(session)}</pre>
             <h1>Dashboard</h1>
             <button>Hello</button>
         </div>
